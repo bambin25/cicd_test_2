@@ -21,9 +21,9 @@ jobs:
 
       - name: application yml 추가
         run: |
-          mkdir -p src/main/resoureces || true
-          echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resoureces/application.yml
-          ls -al ./src/main/resoureces
+          mkdir -p src/main/resources || true
+          echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
+          ls -al ./src/main/resources
           cat ./src/main/resources/applicaiton.yml
         
 
