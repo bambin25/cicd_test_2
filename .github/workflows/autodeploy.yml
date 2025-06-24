@@ -1,4 +1,4 @@
-name: GithubActions 자동 배포
+name: autodeployment with git-action
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
           echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
           ls -al ./src/main/resources
           cat ./src/main/resources/applicaiton.yml
-        
+      
 
-deploy-job:
-  runs-on: ubuntu-latest
+#deploy-job:
+#  runs-on: ubuntu-latest
