@@ -6,9 +6,14 @@ on:
       - main
 
 jobs:
-  My-Auto-CICD-job:
+  autodeploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name : test
+      - name : test1
         run: echo "test"
+
+      - name: test2
+        run: |
+          pwd
+          ls -al
