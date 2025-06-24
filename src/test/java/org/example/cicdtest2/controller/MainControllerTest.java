@@ -11,6 +11,7 @@ class MainControllerTest {
 
     @Test
     void hello() {
-        Assertions.assertThat(true).isTrue();
+//        Assertions.assertThat(true).isTrue();
+        throw new RuntimeException("강제 오류 발생");
     }
 }
