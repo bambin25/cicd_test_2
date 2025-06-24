@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  autodeploy-job:
+  build-job:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,3 +18,14 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
+
+      - name: application yml 추가
+        run: |
+          mkdir -p src/main/resoureces || true
+          echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resoureces/application.yml
+          ls -al ./src/main/resoureces
+          cat ./src/main/resources/applicaiton.yml
+        
+
+deploy-job:
+  runs-on: ubuntu-latest
